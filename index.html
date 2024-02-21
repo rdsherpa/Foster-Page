@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="milestone" content="Foster-Pet">
+  <script src="https://tinyurl.com/2p9w5adj"></script>
+  <title>Foster A Pet</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <h1>Sign Up to Foster a Pet</h1>
+  </header>
+
+  <!-- Form with improved accessiblity features  -->
+  <form>
+    <table>
+      <thead>
+        <tr>
+          <!-- I used colspan to indicate that this header spans multiple columns -->
+          <th colspan="4">Available Pets</th>
+        </tr>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Age</th>
+          <th scope="col">Breed</th>
+          <th scope="col">Picture</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Benny</td>
+          <td>2</td>
+          <td>Golden Retriever</td>
+          <td><img src="https://i.imgur.com/GZZ1Yrs.gif" alt="Benny the Golden         
+          Retrivers"></td>
+          <!-- I Added alt text for images for screen reader users -->
+        </tr>
+        <tr>
+          <td>Felix</td>
+          <td>5</td>
+          <td>Orange Tabby</td>
+          <td><img src="https://i.imgur.com/hYmALTh.jpeg" alt="Felix the Orange Tabby Cat"></td>
+        </tr>
+        <tr>
+          <td>Cooper</td>
+          <td>8</td>
+          <td>German</td>
+          <td><img src="https://i.imgur.com/Z1nLg09.jpeg" alt="Cooper the German Shepred"></td>
+        </tr>
+        <tr>
+          <td>Anna</td>
+          <td>3</td>
+          <td>Long-Haired Dachshund</td>
+          <td><img src="https://i.imgur.com/FArfkqs.jpeg" alt="Anna the Long-Haried Dachshund"></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr></tr>
+      </tfoot>
+    </table>
+
+    <img src="assets/dog.png" alt="Cute Dog Looking Over Form" width="40%">
+    </header>
+
+    <!-- Improved form accessibility -->
+    <form>
+      <label for="name">Full Name:</label <!-- I Added the required attribute to indicate a mandatory field -->
+      <input type="text" id="name" placeholder="Jane Doe" required>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="ztejd@example.com" required>
+
+      <label for="pw">Password:</label>
+      <input type="password" id="pw" name="password" required>
+
+      <label for="num-pets">Number of Pets:</label>
+      <input type="number" min="0" id="num-pets" required>
+
+      <h4>Have you fostered before?</h4>
+      <!-- I Used labels to associate radio buttons with their descriptions -->
+
+      <label for="yes">
+        <input type="radio" id="yes" name="prev-experience">Yes</input>
+      </label>
+      <label for="no">
+        <input type="radio" id="no" name="prev-experience">No</input>
+      </label>
+
+      <h4>Which of these apply to your home?</h4>
+      <!-- I Used labels to associate checkboxes with their descriptions -->
+
+      <label>
+        <input type="checkbox" id="apartment" name="apartment">
+        Apartment
+      </label>
+      <label>
+        <input type="checkbox" id="children" name="children">
+        Children
+      </label>
+      <label>
+        <input type="checkbox" id="yard" name="yard">
+        Yard
+      </label>
+
+      <!-- I added aria-live to provide a label for elements that don’t have visible text.-->
+      <input type="submit" value="Sign Up!" aria-live="assertive">
+
+    </form>
+</body>
+
+</html>
